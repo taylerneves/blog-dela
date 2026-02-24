@@ -1,0 +1,167 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AT:ital,wght@0,100;0,400&display=swap');
+/*Boa forma de importar fontes que tem na reda(Google)*/
+
+:root { /*Aqui você decide as cores, como se fosse váriaveis*/
+    --Amarelo: #F2BB16;
+    --Laranja:#B85F13;
+    --MeioMarrom:#CA7309; 
+    --Marrom:#8C230B; 
+    --Verde: #5C611F; 
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-escrita: 'Playwrite CU Guides', cursive;
+}
+
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+strong {/*Nessa parte foi feita as pertes fortes ficarem laranja e maiores */
+    color: #B85F13;
+    font-size: larger;
+}
+/* BODY */
+body { /*O corpo principal*/
+    background-color: var(--Verde);
+    font-family: var(--fonte-padrao);
+    color: #fff;
+    line-height: 1,6; /*Define a altura verdical de uma linha*/
+}
+
+/* HEADER */
+header { /*Cabeçario*/
+    text-align:center;/*Deixou tudo no central*/
+    padding: 2rem; /*Deixa o conteúdo do centro da box vertical*/
+    background-color: var(--Marrom); /*Cor de fundo*/
+}
+
+header > h1 {    /*Todo o texto dentro da fonte*/
+    color: var(--MeioMarrom); /*Cor da fonte*/
+    font-family: var(--fonte-escrita); /*O tipo*/
+    font-size: 3rem; /*Tamanho da fonte*/ 
+}
+
+header > p { /*Aqui é mais sobre o paragrafo*/
+    color: var(--Amarelo);
+    font-size: 1.2rem;
+} /*Sempre cria as regras na primeira box, depois as regras dos elementos dentro da boxe*/
+
+/* NAV */
+nav { /*Essa é a barra que tem o cabeçario */
+    display: flex; /*Deixa flexivel*/
+    justify-content: center; /*Orientação */
+    gap: 2rem; /*Distância de um elemento para outro*/
+    padding: 1rem; /*Distancia da caixa para parte de cima*/
+    background-color: var(--Laranja);
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition-duration: 1s;
+}
+
+nav a:hover { /*Aqui cria um pseudo classe em cima do Nav e depois os : para interagia com link. Quando passa muda a cor para a pseudoclase*/
+    color: var(--Amarelo);
+}
+
+/* MAIN */
+main {
+    padding: 2rem; /*O tamanho da margem*/
+    max-width: 900px; /*O max para ela*/
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;/*Adiciona bordar circulares*/
+}
+main p {
+    text-indent: 3px;
+}
+
+/* ARTICLES */
+article h1, article h2 { /*Aqui você coloca as configurações gerais de cada box*/
+    color: var(--Amarelo);
+    font-family: var(--fonte-escrita);
+    margin-bottom: 1rem;
+}
+aside strong { /*Aqui eu mudei o strong apenas da lista*/
+    color: #fff;
+    font-size: 20px;
+}
+
+article p {
+    margin-bottom: 1rem;
+}
+
+/* LINKS */
+a {
+    color: var(--Amarelo);
+    text-decoration: underline;
+}
+a:hover {
+    color: var(--MeioMarrom);
+} /*Colocar uma mudança de acordo com a intereção, nesse caso é passar o cursor sobre e ele muda de cor*/
+/* IMAGENS */
+article img {
+    width: 100%;
+    max-width: 500px;
+    display: block; /* permite centralizar com margin */
+    margin: 1rem auto;/*Centraçiza*/
+    border-radius: 10px;
+    border: 5px solid var(--Amarelo); /*Criar uma bordar*/
+}
+
+/* ASIDE LISTA */
+aside {
+    background-color: var(--Laranja);
+    padding: 1.5rem;
+    border-radius: 10px;/*Arredondar borda*/
+    margin: 3rem 0;/*Separação da caixa*/
+}
+
+aside > ul {
+    columns: 2;
+}
+aside > ul li::before{
+     content: "🌻 "; 
+}
+aside > h2 {
+    background-color: #8C230B;
+    padding: 10px;
+    margin: -25px -24px 0px -24px; /*Aumentar a margem*/
+    border-radius: 10px 10px 0px 0px; /*Arredondamento da borrda só na parte de cima*/ 
+}
+
+aside ul { /*Fontes*/
+    list-style: none;
+    font-family: var(--fonte-escrita);
+}
+
+aside li {
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+/* IFRAME */
+iframe {
+    display: block;
+    width: 80%;
+    height: 315px;
+    margin: 1rem auto;
+    border: 2px solid var(--Amarelo);
+    border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--Marrom);
+    color: var(--Amarelo);
+    font-family: var(--fonte-escrita);
+    margin-top: 2rem;
+}
